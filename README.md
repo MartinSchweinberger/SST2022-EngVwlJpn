@@ -10,5 +10,26 @@ This study combines acoustic phonetics with computational and applied corpus lin
 **Data**  
 The study uses data from the [*International Corpus Network of Asian Learners of English* (ICNALE) (Ishikawa 2014)](http://language.sakura.ne.jp/icnale/download.html). The ICNALE is one of the largest publicly available learner corpora comprising more than 10,000 topic-controlled speeches and essays produced by college students in ten countries and regions in Asia as well as English native speakers. For this study, all data representing spoken monologues (spontaneous speech) from 150 JPN and 132 ENS were analyzed. 
 
+The audio and text files of Japanese and the English spoken component of the ICNALE data were downloaded and force-aligned using [WebMAUS ](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSBasic). All files were forced aligned twice:  
+* once with the target variety being US American English 
+* once with the target variety being US British English
+
+This resulted in all files having three variants fo each British and American English being the target variety:  
+* a txt file
+* a mp3 file
+* a TextGrid file
+
+The file had the same names but differed in their extension. 
+
+**Folder structure**  
+The folder structure for this project requires that the directory has the following format  
+* project folder (contains all files relevant for the study)  
+  * data (contains all data relevent for the study)  
+    * JPN (contains all txt, mp3, and TextGrid files of the L1-Japanese English learners)
+    * ENS (contains all txt, mp3, and TextGrid files of the L1-English speakers)  
+  * the Rproj file  
+  * the Rmd files (the R notebooks)
+
 **References**  
 Ishikawa, S. (2014). Design of the ICNALE Spoken: A new database for multi-modal contrastive interlanguage analysis, *Learner Corpus Studies in Asia and the World* 2: 63-76.
+
